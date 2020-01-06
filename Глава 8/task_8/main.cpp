@@ -121,9 +121,6 @@ int main()
         cout  << endl << "continue? (y/n)" << endl;
         cin >> ans;
     } while (ans != 'n');
-    
-
-    
 
     return 0;                                                  
 }
