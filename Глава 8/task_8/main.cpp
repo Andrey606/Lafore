@@ -77,6 +77,24 @@ class bMoney {
         {
             return bMoney (money/t);
         }
+        // bMoney += ЬМоnеу
+        bMoney operator+= (bMoney t)
+        {
+            money += t.money;
+            return bMoney (money);
+        }
+        // bMoney++
+        bMoney operator++ (int)
+        {
+            money++;
+            return bMoney (money);
+        }
+        // -bMoney
+        bMoney operator- (void)
+        {
+            cout << "-bMoney case" << endl;
+            return bMoney (-money);
+        }
 };
 
 
@@ -117,6 +135,24 @@ int main()
         cout << "m3 = m1 / num(5)" << endl;
         m3 = m1 / num;
         m3.getmoney();
+
+        // -----------------------------------------------
+
+        // 6 ЬМоnеу += ЬМоnеу 
+        cout << "m3 += m2" << endl;
+        m3 += m2;
+        m3.getmoney();
+
+        // 7 ЬМоnеу ++ 
+        cout << "m3++" << endl;
+        m3++;
+        m3.getmoney();
+
+        // 8 -ЬМоnеу
+        cout << "-m3" << endl;
+        m3 = -m3+m3;
+        m3.getmoney();
+
 
         cout  << endl << "continue? (y/n)" << endl;
         cin >> ans;
